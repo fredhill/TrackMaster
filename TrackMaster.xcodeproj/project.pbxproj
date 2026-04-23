@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF00000000000000000000FF /* TrackMasterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF00000000000000000000FF /* TrackMasterApp.swift */; };
+		BF00000000000000000001FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF00000000000000000001FF /* AppDelegate.swift */; };
+		BF00000000000000000002FF /* HIDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF00000000000000000002FF /* HIDManager.swift */; };
+		BF00000000000000000003FF /* EventInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF00000000000000000003FF /* EventInterceptor.swift */; };
+		BF00000000000000000004FF /* ChordDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF00000000000000000004FF /* ChordDetector.swift */; };
+		BF00000000000000000005FF /* AppContextMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF00000000000000000005FF /* AppContextMonitor.swift */; };
+		BF00000000000000000006FF /* FocusController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF00000000000000000006FF /* FocusController.swift */; };
+		BF00000000000000000007FF /* VolumeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF00000000000000000007FF /* VolumeController.swift */; };
+		BF00000000000000000008FF /* HUDWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF00000000000000000008FF /* HUDWindowController.swift */; };
+		BF00000000000000000009FF /* PreferencesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF00000000000000000009FF /* PreferencesManager.swift */; };
+		BF0000000000000000000AFF /* MenuBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0000000000000000000AFF /* MenuBarController.swift */; };
+		BF0000000000000000000BFF /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0000000000000000000BFF /* PreferencesView.swift */; };
+		BF0000000000000000000CFF /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0000000000000000000CFF /* ButtonsView.swift */; };
+		BF0000000000000000000DFF /* PerAppRulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0000000000000000000DFF /* PerAppRulesView.swift */; };
+		BF0000000000000000000EFF /* ChordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0000000000000000000EFF /* ChordsView.swift */; };
+		BF0000000000000000000FFF /* ScrollSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0000000000000000000FFF /* ScrollSettingsView.swift */; };
+		BF00000000000000000010FF /* FocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF00000000000000000010FF /* FocusView.swift */; };
+		BF00000000000000000011FF /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF00000000000000000011FF /* AboutView.swift */; };
+		BF00000000000000000012FF /* HUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF00000000000000000012FF /* HUDView.swift */; };
+		BF00000000000000000013FF /* HIDEventLoggerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF00000000000000000013FF /* HIDEventLoggerView.swift */; };
+		EE00000000000000000000FB /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE00000000000000000000EE /* IOKit.framework */; };
+		EE00000000000000000000FC /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE00000000000000000000EF /* CoreAudio.framework */; };
+		EE00000000000000000000FD /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE00000000000000000000FA /* ServiceManagement.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FF00000000000000000000FF /* TrackMasterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackMasterApp.swift; sourceTree = "<group>"; };
+		FF00000000000000000001FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FF00000000000000000002FF /* HIDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIDManager.swift; sourceTree = "<group>"; };
+		FF00000000000000000003FF /* EventInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventInterceptor.swift; sourceTree = "<group>"; };
+		FF00000000000000000004FF /* ChordDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordDetector.swift; sourceTree = "<group>"; };
+		FF00000000000000000005FF /* AppContextMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContextMonitor.swift; sourceTree = "<group>"; };
+		FF00000000000000000006FF /* FocusController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusController.swift; sourceTree = "<group>"; };
+		FF00000000000000000007FF /* VolumeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeController.swift; sourceTree = "<group>"; };
+		FF00000000000000000008FF /* HUDWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDWindowController.swift; sourceTree = "<group>"; };
+		FF00000000000000000009FF /* PreferencesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesManager.swift; sourceTree = "<group>"; };
+		FF0000000000000000000AFF /* MenuBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarController.swift; sourceTree = "<group>"; };
+		FF0000000000000000000BFF /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
+		FF0000000000000000000CFF /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
+		FF0000000000000000000DFF /* PerAppRulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerAppRulesView.swift; sourceTree = "<group>"; };
+		FF0000000000000000000EFF /* ChordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordsView.swift; sourceTree = "<group>"; };
+		FF0000000000000000000FFF /* ScrollSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollSettingsView.swift; sourceTree = "<group>"; };
+		FF00000000000000000010FF /* FocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusView.swift; sourceTree = "<group>"; };
+		FF00000000000000000011FF /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		FF00000000000000000012FF /* HUDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDView.swift; sourceTree = "<group>"; };
+		FF00000000000000000013FF /* HIDEventLoggerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIDEventLoggerView.swift; sourceTree = "<group>"; };
+		FF00000000000000000014FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF00000000000000000015FF /* TrackMaster.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TrackMaster.entitlements; sourceTree = "<group>"; };
+		DD00000000000000000000DD /* TrackMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE00000000000000000000EE /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		EE00000000000000000000EF /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		EE00000000000000000000FA /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BB00000000000000000000BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE00000000000000000000FB /* IOKit.framework in Frameworks */,
+				EE00000000000000000000FC /* CoreAudio.framework in Frameworks */,
+				EE00000000000000000000FD /* ServiceManagement.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC00000000000000000000CC /* TrackMaster */ = {
+			isa = PBXGroup;
+			children = (
+				CC00000000000000000000CD /* TrackMaster */,
+				CC00000000000000000000DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC00000000000000000000CD /* TrackMaster */ = {
+			isa = PBXGroup;
+			children = (
+				FF00000000000000000000FF /* TrackMasterApp.swift */,
+				FF00000000000000000001FF /* AppDelegate.swift */,
+				FF00000000000000000002FF /* HIDManager.swift */,
+				FF00000000000000000003FF /* EventInterceptor.swift */,
+				FF00000000000000000004FF /* ChordDetector.swift */,
+				FF00000000000000000005FF /* AppContextMonitor.swift */,
+				FF00000000000000000006FF /* FocusController.swift */,
+				FF00000000000000000007FF /* VolumeController.swift */,
+				FF00000000000000000008FF /* HUDWindowController.swift */,
+				FF00000000000000000009FF /* PreferencesManager.swift */,
+				FF0000000000000000000AFF /* MenuBarController.swift */,
+				CC00000000000000000000CE /* Views */,
+				CC00000000000000000000CF /* Debug */,
+				FF00000000000000000014FF /* Info.plist */,
+				FF00000000000000000015FF /* TrackMaster.entitlements */,
+			);
+			name = TrackMaster;
+			path = TrackMaster;
+			sourceTree = "<group>";
+		};
+		CC00000000000000000000CE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FF0000000000000000000BFF /* PreferencesView.swift */,
+				FF0000000000000000000CFF /* ButtonsView.swift */,
+				FF0000000000000000000DFF /* PerAppRulesView.swift */,
+				FF0000000000000000000EFF /* ChordsView.swift */,
+				FF0000000000000000000FFF /* ScrollSettingsView.swift */,
+				FF00000000000000000010FF /* FocusView.swift */,
+				FF00000000000000000011FF /* AboutView.swift */,
+				FF00000000000000000012FF /* HUDView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CC00000000000000000000CF /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				FF00000000000000000013FF /* HIDEventLoggerView.swift */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
+		CC00000000000000000000DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD00000000000000000000DD /* TrackMaster.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA00000000000000000000AB /* TrackMaster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA00000000000000000000AD /* Build configuration list for PBXNativeTarget "TrackMaster" */;
+			buildPhases = (
+				BB00000000000000000000BB /* Sources */,
+				BB00000000000000000000BC /* Frameworks */,
+				BB00000000000000000000BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrackMaster;
+			productName = TrackMaster;
+			productReference = DD00000000000000000000DD /* TrackMaster.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA00000000000000000000AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					AA00000000000000000000AB = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = AA00000000000000000000AC /* Build configuration list for PBXProject "TrackMaster" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC00000000000000000000CC /* TrackMaster */;
+			productRefGroup = CC00000000000000000000DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA00000000000000000000AB /* TrackMaster */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB00000000000000000000BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BB00000000000000000000BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF00000000000000000000FF /* TrackMasterApp.swift in Sources */,
+				BF00000000000000000001FF /* AppDelegate.swift in Sources */,
+				BF00000000000000000002FF /* HIDManager.swift in Sources */,
+				BF00000000000000000003FF /* EventInterceptor.swift in Sources */,
+				BF00000000000000000004FF /* ChordDetector.swift in Sources */,
+				BF00000000000000000005FF /* AppContextMonitor.swift in Sources */,
+				BF00000000000000000006FF /* FocusController.swift in Sources */,
+				BF00000000000000000007FF /* VolumeController.swift in Sources */,
+				BF00000000000000000008FF /* HUDWindowController.swift in Sources */,
+				BF00000000000000000009FF /* PreferencesManager.swift in Sources */,
+				BF0000000000000000000AFF /* MenuBarController.swift in Sources */,
+				BF0000000000000000000BFF /* PreferencesView.swift in Sources */,
+				BF0000000000000000000CFF /* ButtonsView.swift in Sources */,
+				BF0000000000000000000DFF /* PerAppRulesView.swift in Sources */,
+				BF0000000000000000000EFF /* ChordsView.swift in Sources */,
+				BF0000000000000000000FFF /* ScrollSettingsView.swift in Sources */,
+				BF00000000000000000010FF /* FocusView.swift in Sources */,
+				BF00000000000000000011FF /* AboutView.swift in Sources */,
+				BF00000000000000000012FF /* HUDView.swift in Sources */,
+				BF00000000000000000013FF /* HIDEventLoggerView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AA00000000000000000000AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AA00000000000000000000AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		AA00000000000000000000BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "TrackMaster/TrackMaster.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "TrackMaster/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.trackmaster.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG ENABLE_HID_LOGGER";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		AA00000000000000000000BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "TrackMaster/TrackMaster.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "TrackMaster/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.trackmaster.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA00000000000000000000AC /* Build configuration list for PBXProject "TrackMaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA00000000000000000000AE /* Debug */,
+				AA00000000000000000000AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA00000000000000000000AD /* Build configuration list for PBXNativeTarget "TrackMaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA00000000000000000000BA /* Debug */,
+				AA00000000000000000000BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = AA00000000000000000000AA /* Project object */;
+}
