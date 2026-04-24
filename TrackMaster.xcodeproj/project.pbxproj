@@ -33,6 +33,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD00000000000000000000DD /* TrackMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE00000000000000000000EE /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		EE00000000000000000000EF /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		EE00000000000000000000FA /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		FF00000000000000000000FF /* TrackMasterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackMasterApp.swift; sourceTree = "<group>"; };
 		FF00000000000000000001FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF00000000000000000002FF /* HIDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIDManager.swift; sourceTree = "<group>"; };
@@ -55,10 +59,6 @@
 		FF00000000000000000013FF /* HIDEventLoggerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIDEventLoggerView.swift; sourceTree = "<group>"; };
 		FF00000000000000000014FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF00000000000000000015FF /* TrackMaster.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TrackMaster.entitlements; sourceTree = "<group>"; };
-		DD00000000000000000000DD /* TrackMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE00000000000000000000EE /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
-		EE00000000000000000000EF /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
-		EE00000000000000000000FA /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,11 +75,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CC00000000000000000000CC /* TrackMaster */ = {
+		4CEF80A62F9B06E900BDE822 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				EE00000000000000000000EE /* IOKit.framework */,
+				EE00000000000000000000EF /* CoreAudio.framework */,
+				EE00000000000000000000FA /* ServiceManagement.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC00000000000000000000CC = {
 			isa = PBXGroup;
 			children = (
 				CC00000000000000000000CD /* TrackMaster */,
 				CC00000000000000000000DA /* Products */,
+				4CEF80A62F9B06E900BDE822 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,7 +113,6 @@
 				FF00000000000000000014FF /* Info.plist */,
 				FF00000000000000000015FF /* TrackMaster.entitlements */,
 			);
-			name = TrackMaster;
 			path = TrackMaster;
 			sourceTree = "<group>";
 		};
@@ -180,7 +190,7 @@
 				en,
 				Base,
 			);
-			mainGroup = CC00000000000000000000CC /* TrackMaster */;
+			mainGroup = CC00000000000000000000CC;
 			productRefGroup = CC00000000000000000000DA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -351,14 +361,14 @@
 		AA00000000000000000000BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "TrackMaster/TrackMaster.entitlements";
+				CODE_SIGN_ENTITLEMENTS = TrackMaster/TrackMaster.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = FTC9W53MBY;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "TrackMaster/Info.plist";
+				INFOPLIST_FILE = TrackMaster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -374,14 +384,14 @@
 		AA00000000000000000000BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "TrackMaster/TrackMaster.entitlements";
+				CODE_SIGN_ENTITLEMENTS = TrackMaster/TrackMaster.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = FTC9W53MBY;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "TrackMaster/Info.plist";
+				INFOPLIST_FILE = TrackMaster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -416,7 +426,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
 	};
 	rootObject = AA00000000000000000000AA /* Project object */;
 }
