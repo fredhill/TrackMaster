@@ -12,7 +12,7 @@ struct AboutView: View {
                 HStack(spacing: 16) {
                     Image(systemName: "cursorarrow.and.square.on.square.dashed")
                         .font(.system(size: 48, weight: .light))
-                        .foregroundStyle(.accent)
+                        .foregroundStyle(Color.accentColor)
 
                     VStack(alignment: .leading, spacing: 4) {
                         Text("TrackMaster")
@@ -59,7 +59,7 @@ struct AboutView: View {
         .padding(16)
         .onAppear {
             refreshTimer = Timer.scheduledTimer(withTimeInterval: 2, repeats: true) { _ in
-                isAccessibilityGranted = AXIsProcessTrusted()
+                Task { @MainActor in isAccessibilityGranted = AXIsProcessTrusted() }
             }
         }
         .onDisappear {

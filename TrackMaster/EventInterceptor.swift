@@ -1,4 +1,4 @@
-import CoreGraphics
+@preconcurrency import CoreGraphics
 import AppKit
 
 // EventInterceptor installs a CGEvent tap at kCGHIDEventTap.
@@ -73,7 +73,7 @@ final class EventInterceptor {
 
     // MARK: - Event handler (called from CGEvent tap callback on main run loop)
 
-    fileprivate func handleEvent(proxy: CGEventTapProxy, type: CGEventType, event: CGEvent) -> CGEvent? {
+    fileprivate func handleEvent(type: CGEventType, event: CGEvent) -> CGEvent? {
         let bundleID  = appContextMonitor?.currentBundleID ?? ""
         let snapshot  = preferencesManager?.snapshot
 
@@ -275,7 +275,7 @@ final class EventInterceptor {
         guard let app = NSWorkspace.shared.frontmostApplication,
               app.bundleIdentifier != "com.apple.loginwindow" else { return }
         // Verify the app responds to Cmd+Q by attempting to post it
-        app.activate(options: .activateIgnoringOtherApps)
+        app.activate()
         postKeyCombo(modifiers: [.maskCommand], keyCode: 0x0C)  // Q
     }
 
@@ -305,7 +305,7 @@ private let eventTapCallback: CGEventTapCallBack = { proxy, type, event, userInf
     guard let userInfo else { return Unmanaged.passUnretained(event) }
     let interceptor = Unmanaged<EventInterceptor>.fromOpaque(userInfo).takeUnretainedValue()
     let result = MainActor.assumeIsolated {
-        interceptor.handleEvent(proxy: proxy, type: type, event: event)
+        interceptor.handleEvent(type: type, event: event)
     }
     if let result {
         return Unmanaged.passUnretained(result)

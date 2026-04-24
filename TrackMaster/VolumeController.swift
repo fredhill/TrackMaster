@@ -49,7 +49,7 @@ final class VolumeController {
 
     private func setVolume(_ volume: Float, deviceID: AudioDeviceID) {
         var vol = volume
-        var size = UInt32(MemoryLayout<Float>.size)
+        let size = UInt32(MemoryLayout<Float>.size)
         var address = AudioObjectPropertyAddress(
             mSelector: kAudioDevicePropertyVolumeScalar,
             mScope: kAudioDevicePropertyScopeOutput,

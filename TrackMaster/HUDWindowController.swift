@@ -38,7 +38,7 @@ final class HUDWindowController {
         }
 
         dismissTimer = Timer.scheduledTimer(withTimeInterval: dismissDelay, repeats: false) { [weak self] _ in
-            self?.dismiss()
+            Task { @MainActor [weak self] in self?.dismiss() }
         }
     }
 
@@ -77,7 +77,7 @@ final class HUDWindowController {
             ctx.duration = 0.25
             self.window?.animator().alphaValue = 0
         }, completionHandler: { [weak self] in
-            self?.window?.orderOut(nil)
+            Task { @MainActor [weak self] in self?.window?.orderOut(nil) }
         })
     }
 

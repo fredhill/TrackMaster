@@ -1,5 +1,6 @@
 import SwiftUI
 import AppKit
+import UniformTypeIdentifiers
 
 struct PerAppRulesView: View {
     @EnvironmentObject var prefs: PreferencesManager
@@ -91,7 +92,7 @@ struct PerAppRuleRow: View {
     private func appIcon(for bundleID: String) -> some View {
         let path = NSWorkspace.shared.urlForApplication(withBundleIdentifier: bundleID)?.path
         let icon: NSImage = path.flatMap { NSImage(contentsOfFile: $0 + "/Contents/Resources/AppIcon.icns") }
-            ?? NSWorkspace.shared.icon(forFileType: "app")
+            ?? NSWorkspace.shared.icon(for: UTType.applicationBundle)
         return Image(nsImage: icon).resizable().scaledToFit()
     }
 }

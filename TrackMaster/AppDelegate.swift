@@ -1,5 +1,6 @@
 import AppKit
 import ServiceManagement
+import SwiftUI
 
 @MainActor
 final class AppDelegate: NSObject, NSApplicationDelegate {
@@ -95,7 +96,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     // MARK: - Accessibility
 
     private func promptAccessibility() {
-        let opts = [kAXTrustedCheckOptionPrompt.takeUnretainedValue() as String: true] as CFDictionary
+        // Use raw string key to avoid concurrency-unsafe global reference
+        let opts = ["AXTrustedCheckOptionPrompt": true] as CFDictionary
         AXIsProcessTrustedWithOptions(opts)
     }
 

@@ -59,13 +59,8 @@ final class HIDManager: ObservableObject {
 
     // MARK: - Internal handlers (called from C callbacks via MainActor.assumeIsolated)
 
-    fileprivate func handleHIDValue(_ value: IOHIDValue) {
-        let element   = IOHIDValueGetElement(value)
-        let usagePage = IOHIDElementGetUsagePage(element)
-        let usage     = IOHIDElementGetUsage(element)
-        let intValue  = IOHIDValueGetIntegerValue(value)
-        let timestamp = IOHIDValueGetTimeStamp(value)
-
+    // Called with pre-extracted primitives so no CF type crosses the actor boundary
+    fileprivate func handleHIDData(usagePage: UInt32, usage: UInt32, intValue: Int, timestamp: UInt64) {
         appendLog(usagePage: usagePage, usage: usage, value: intValue, timestamp: timestamp)
 
         switch (usagePage, usage) {
@@ -129,7 +124,15 @@ struct HIDLogEntry: Identifiable, Sendable {
 private let hidValueCallback: IOHIDValueCallback = { context, _, _, value in
     guard let context else { return }
     let manager = Unmanaged<HIDManager>.fromOpaque(context).takeUnretainedValue()
-    MainActor.assumeIsolated { manager.handleHIDValue(value) }
+    // Extract all data from the CF types here, before crossing the actor boundary
+    let element   = IOHIDValueGetElement(value)
+    let usagePage = IOHIDElementGetUsagePage(element)
+    let usage     = IOHIDElementGetUsage(element)
+    let intValue  = Int(IOHIDValueGetIntegerValue(value))
+    let timestamp = IOHIDValueGetTimeStamp(value)
+    MainActor.assumeIsolated {
+        manager.handleHIDData(usagePage: usagePage, usage: usage, intValue: intValue, timestamp: timestamp)
+    }
 }
 
 private let deviceConnectedCallback: IOHIDDeviceCallback = { context, _, _, _ in

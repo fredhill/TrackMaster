@@ -68,7 +68,7 @@ struct FocusView: View {
 
                 ForEach(prefs.preferences.focusCycleOrder, id: \.self) { name in
                     HStack {
-                        Image(systemName: "moon").foregroundStyle(.accentColor)
+                        Image(systemName: "moon").foregroundStyle(Color.accentColor)
                         Text(name)
                         Spacer()
                     }
