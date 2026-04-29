@@ -221,14 +221,23 @@ final class EventInterceptor {
 
         case .doubleClick:
             guard isDown else { return nil }
-            let down = CGEvent(mouseEventSource: nil, mouseType: .leftMouseDown,
-                               mouseCursorPosition: event.location, mouseButton: .left)
-            let up   = CGEvent(mouseEventSource: nil, mouseType: .leftMouseUp,
-                               mouseCursorPosition: event.location, mouseButton: .left)
-            down?.setIntegerValueField(.mouseEventClickState, value: 2)
-            up?.setIntegerValueField(.mouseEventClickState, value: 2)
-            down?.post(tap: .cghidEventTap)
-            up?.post(tap: .cghidEventTap)
+            // Post a proper 4-event double-click sequence (clickState 1 then 2).
+            // Use cgAnnotatedSessionEventTap so these synthetic events are injected
+            // *after* our HID tap — they won't re-enter chord detection.
+            let src = CGEventSource(stateID: .hidSystemState)
+            let loc = event.location
+            let d1 = CGEvent(mouseEventSource: src, mouseType: .leftMouseDown, mouseCursorPosition: loc, mouseButton: .left)
+            let u1 = CGEvent(mouseEventSource: src, mouseType: .leftMouseUp,   mouseCursorPosition: loc, mouseButton: .left)
+            let d2 = CGEvent(mouseEventSource: src, mouseType: .leftMouseDown, mouseCursorPosition: loc, mouseButton: .left)
+            let u2 = CGEvent(mouseEventSource: src, mouseType: .leftMouseUp,   mouseCursorPosition: loc, mouseButton: .left)
+            d1?.setIntegerValueField(.mouseEventClickState, value: 1)
+            u1?.setIntegerValueField(.mouseEventClickState, value: 1)
+            d2?.setIntegerValueField(.mouseEventClickState, value: 2)
+            u2?.setIntegerValueField(.mouseEventClickState, value: 2)
+            d1?.post(tap: .cgAnnotatedSessionEventTap)
+            u1?.post(tap: .cgAnnotatedSessionEventTap)
+            d2?.post(tap: .cgAnnotatedSessionEventTap)
+            u2?.post(tap: .cgAnnotatedSessionEventTap)
             return nil  // suppress original
 
         case .browserBack:

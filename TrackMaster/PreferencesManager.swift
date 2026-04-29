@@ -142,7 +142,7 @@ struct TrackMasterPreferences: Codable, Sendable {
         .topRight:    .rightClick,
     ]
     var appOverrides: [AppOverrideRule] = Self.defaultAppOverrides
-    var chords: [ChordConfig] = [ChordConfig(buttons: [.bottomLeft, .bottomRight])]
+    var chords: [ChordConfig] = [ChordConfig(buttons: [.bottomLeft, .bottomRight], enabled: true)]
     var scrollConfig: ScrollConfig = ScrollConfig()
     var scrollAppOverrides: [ScrollAppOverrideRule] = Self.defaultScrollOverrides
     var focusCycleOrder: [String] = []
