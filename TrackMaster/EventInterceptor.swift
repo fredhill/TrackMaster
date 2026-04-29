@@ -96,8 +96,6 @@ final class EventInterceptor {
         case .rightMouseDown:
             let decision = chordDetector?.processButtonDown(.bottomRight) ?? .passThrough
             if decision == .suppress { return nil }
-            // If scroll modifier is active this button is held as modifier, suppress click
-            if chordDetector?.isHeld(.bottomRight) == true { return nil }
             let action = snapshot?.effectiveAction(button: .bottomRight, bundleID: bundleID) ?? .rightClick
             return perform(action: action, event: event, isDown: true)
 
@@ -118,7 +116,6 @@ final class EventInterceptor {
             guard let buttonID = ButtonID.from(cgButtonNumber: btnNum) else { return event }
             let decision = chordDetector?.processButtonDown(buttonID) ?? .passThrough
             if decision == .suppress { return nil }
-            if chordDetector?.isHeld(buttonID) == true { return nil }
             let action = snapshot?.effectiveAction(button: buttonID, bundleID: bundleID) ?? .noAction
             return perform(action: action, event: event, isDown: true)
 
@@ -151,7 +148,7 @@ final class EventInterceptor {
         let rawDelta = Int(event.getIntegerValueField(.scrollWheelEventDeltaAxis1))
         let increase = rawDelta > 0
 
-        if let modifier = chordDetector?.heldModifier() {
+        if let modifier = chordDetector?.heldScrollModifier() {
             switch modifier {
             case .bottomLeft:
                 volumeController?.scrollTick(increase: increase)
